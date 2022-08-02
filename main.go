@@ -20,6 +20,8 @@ func main() {
 	fmt.Println("heist is on:", isHeistOn)
 	openedVault := rand.Intn(100)
 	if isHeistOn && openedVault >= 70 {
-		fmt.Println()
+		fmt.Println("Vaults open! Secure the bag!")
+	} else if isHeistOn && openedVault < 70 {
+		fmt.Println("The vault was so hard to open that when it did your soul was vaccuumed out and you died bro. Sorry.")
 	}
 }
