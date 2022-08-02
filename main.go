@@ -11,7 +11,7 @@ func main() {
 	isHeistOn := true
 	eludedGuards := rand.Intn(100)
 
-	if eludedGuards >= 50 {
+	if eludedGuards >= 30 {
 		fmt.Println("You've made it past the guards, now what?")
 	} else {
 		isHeistOn = false
@@ -28,13 +28,13 @@ func main() {
 		isHeistOn = false
 	}
 
-	leftSafely := rand.Intn(5)
+	leftSafely := rand.Intn(10)
 
 	if isHeistOn {
 		switch leftSafely {
 		case 0:
 			isHeistOn = false
-			fmt.Println("The heist was not successful lil bruh.")
+			fmt.Println("The heist was not successful lil bruh. You forgot to have a get-away")
 		case 1:
 			isHeistOn = false
 			fmt.Println("The police came to serve and protect the money. You died. Sad.")
@@ -44,10 +44,14 @@ func main() {
 		case 3:
 			isHeistOn = false
 			fmt.Println("You got stuck in the vault. There was no food and you died. Oops.")
-		case 4:
-			isHeistOn = true
-			fmt.Println("YOU DID IT! You succesfully secured Jeff Bezos' bag! W")
+		default:
+			fmt.Println("YOU DID IT! You succesfully secured Jeff Bezos' bag! W.")
 		}
+	}
+
+	if isHeistOn {
+		amtStolen := 10000 + rand.Intn(100000000)
+		fmt.Printf("You got away with %d racks. NIIICE.", amtStolen)
 	}
 
 }
