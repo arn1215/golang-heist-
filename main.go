@@ -31,11 +31,22 @@ func main() {
 	leftSafely := rand.Intn(5)
 
 	if isHeistOn {
-		switch leftSafely{
-		case 0: 
+		switch leftSafely {
+		case 0:
 			isHeistOn = false
 			fmt.Println("The heist was not successful lil bruh.")
-		case
+		case 1:
+			isHeistOn = false
+			fmt.Println("The police came to serve and protect the money. You died. Sad.")
+		case 2:
+			isHeistOn = false
+			fmt.Println("You got stuck under a pile of money. You died. Sad.")
+		case 3:
+			isHeistOn = false
+			fmt.Println("You got stuck in the vault. There was no food and you died. Oops.")
+		case 4:
+			isHeistOn = true
+			fmt.Println("YOU DID IT! You succesfully secured Jeff Bezos' bag! W")
 		}
 	}
 
